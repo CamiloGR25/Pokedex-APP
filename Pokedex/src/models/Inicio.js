@@ -48,6 +48,19 @@ export default function Inicio() {
                     </View>
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity
+                onPress={() => {
+                    Alert.alert("Has presionado el botón Pokemon favoritos");
+                }}>
+                <View style={styles.opciones}>
+                    <Image
+                        style={{ width: 90, height: 90 }}
+                        source={require("../img/Corazon.png")}
+                        resizeMethod='contain'
+                    />
+                    <Text style={{ marginTop: 3, fontWeight: "bold" }}>FAVORITOS</Text>
+                </View>
+            </TouchableOpacity>
 
             <StatusBar style="auto" />
         </View>
