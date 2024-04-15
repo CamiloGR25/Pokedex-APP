@@ -9,12 +9,19 @@ export default function DatosPokemon() {
 
             </View>
             <View style={styles.imagen}>
-
+                <Image
+                    style={{ width: 300, height: 300 }}
+                    source={{ uri: "https://www.nintendo.com/eu/media/images/08_content_images/news_5/2016_1/august_10/CI7_PokemonFeatureNews_Charmander.jpg" }}
+                    resizeMode="contain"//mantenga toda la imagen               
+                />
             </View>
             <View style={styles.datos}>
-
+                <Text style={{ color: "white", fontSize: 20 }}>Indice</Text>
+                <Text>Indice</Text>
+                <Text>Indice</Text>
             </View>
             <Menu />
+            <StatusBar style="auto" />
         </View>
     )
 }
@@ -51,6 +58,6 @@ const styles = StyleSheet.create({
         width: "80%",
         height: "20%",
         marginTop: "10%",
-        backgroundColor: "black"
+        backgroundColor: "black",
     }
 });

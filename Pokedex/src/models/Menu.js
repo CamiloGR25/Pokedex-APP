@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Pokemon from './Pokemon';
 
 export default function Menu() {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: "row", }}>
@@ -22,7 +25,7 @@ export default function Menu() {
 
                 <TouchableOpacity
                     onPress={() => {
-                        Alert.alert("Has presionado el botón de POKEMON");
+                        navigation.navigate('Pokemon')
 
                     }}>
                     <View style={styles.opciones}>

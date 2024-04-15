@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
 import Buscador from './Buscador';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Inicio() {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
+
             <Image
                 style={{ width: 235, height: 100, marginTop: 50 }}
                 source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" }}
@@ -36,7 +39,7 @@ export default function Inicio() {
 
                 <TouchableOpacity
                     onPress={() => {
-                        Alert.alert("Has presionado el botón buscar pokemon");
+                        navigation.navigate('Buscador')
                     }}>
                     <View style={styles.opciones}>
                         <Image
@@ -54,7 +57,7 @@ export default function Inicio() {
                 }}>
                 <View style={styles.opciones}>
                     <Image
-                        style={{ width: 90, height: 90 }}
+                        style={{ width: 100, height: 90 }}
                         source={require("../img/Corazon.png")}
                         resizeMethod='contain'
                     />
