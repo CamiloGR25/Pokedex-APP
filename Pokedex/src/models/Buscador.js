@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import Menu from './Menu';
 
 export default function Buscador() {
@@ -10,6 +10,10 @@ export default function Buscador() {
                 placeholder='Nombre del Pokémon'
                 placeholderTextColor={"blue"}
                 style={styles.input}
+            />
+            <Image
+                style={styles.img_pikachu}
+                source={{ uri: "https://detectivepikachu.pokemon.com/_images/characters/pikachu-intro.png" }}
             />
             <Menu />
             <StatusBar style="auto" />
@@ -42,5 +46,11 @@ const styles = StyleSheet.create({
         width: "90%", //largo
         height: 50, //alto
         borderRadius: 30, //borde radio
+    },
+    img_pikachu: {
+        width: "100%",
+        height: "53%",
+        marginTop: "10%",
+        resizeMode: "contain",
     }
 });

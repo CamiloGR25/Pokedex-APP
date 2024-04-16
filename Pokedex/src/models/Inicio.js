@@ -47,7 +47,7 @@ export default function Inicio() {
                         <Image
                             style={{ width: 90, height: 90, borderRadius: 30, }}
                             source={{ uri: "https://images.wikidexcdn.net/mwuploads/wikidex/e/e2/latest/20230122133405/Lupa_EP.png" }}
-                            resizeMethod='contain'
+                        //resizeMethod='contain'
                         />
                         <Text style={{ marginTop: 3, fontWeight: "bold" }}>BUSCAR</Text>
                     </View>
@@ -62,7 +62,7 @@ export default function Inicio() {
                     <Image
                         style={{ width: 100, height: 90 }}
                         source={require("../img/Corazon.png")}
-                        resizeMethod='contain'
+                    //resizeMethod='contain'
                     />
                     <Text style={{ marginTop: 3, fontWeight: "bold" }}>FAVORITOS</Text>
                 </View>
