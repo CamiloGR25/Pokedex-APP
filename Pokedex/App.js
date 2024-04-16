@@ -5,6 +5,8 @@ import Buscador from './src/models/Buscador';
 import DatosPokemon from './src/models/DatosPokemon';
 import Pokemon from './src/models/Pokemon';
 import Favorito from './src/models/Favorito';
+
+
 const Stack = createNativeStackNavigator();
 
 function App() {

@@ -11,7 +11,7 @@ export default function Menu() {
                 <TouchableOpacity
                     onPress={() => {
                         //boton favorito
-                        navigation.navigate("Favorito")
+                        navigation.navigate("DatosPokemon")
                     }}>
                     <View style={styles.opciones}>
                         <Image

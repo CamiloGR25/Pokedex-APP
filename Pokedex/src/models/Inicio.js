@@ -32,7 +32,7 @@ export default function Inicio() {
                         <Image
                             style={{ width: 80, height: 80, borderRadius: 30, }}
                             source={{ uri: "https://w7.pngwing.com/pngs/173/464/png-transparent-pokemon-ball-pokeball-area-wiki-technology-thumbnail.png" }}
-                            resizeMethod='contain'
+                        //resizeMethod='contain'
                         />
                         <Text style={{ marginTop: 10, fontWeight: "bold" }}>POKÉMON</Text>
                     </View>

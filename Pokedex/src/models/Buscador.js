@@ -5,9 +5,9 @@ import Menu from './Menu';
 export default function Buscador() {
     return (
         <View style={styles.container}>
-            <Text style={styles.texto}>Buscar:</Text>
+            <Text style={styles.texto}>Buscar Pokémon:</Text>
             <TextInput
-                placeholder='Nombre del Pokemon'
+                placeholder='Nombre del Pokémon'
                 placeholderTextColor={"blue"}
                 style={styles.input}
             />
@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
 
     },
     texto: {
-        fontSize: 25,
+        fontSize: 30,
         color: "white",
         fontWeight: "bold",
-        marginTop: 45,
-        marginRight: 220
+        marginTop: 25,
+        marginRight: "20%"
     },
     input: {
         borderWidth: 5,//tamaño del borde
