@@ -9,12 +9,12 @@ export default function Inicio() {
         <View style={styles.container}>
 
             <Image
-                style={{ width: 235, height: 100, marginTop: 50 }}
+                style={{ width: "65%", height: "22%" }}
                 source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" }}
                 resizeMode="contain"//mantenga toda la imagen
             />
             <Image
-                style={{ width: 380, height: 240 }}
+                style={{ width: "100%", height: "20%" }}
                 source={{ uri: "https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" }}
                 resizeMode="contain"//mantenga toda la imagen
 
@@ -94,8 +94,9 @@ const styles = StyleSheet.create({
         fontWeight: "bold"
     },
     imagen: {
-        width: 300,
-        height: 150
+        flex: 1,
+        resizeMode: "contain",
+        width: "100%"
     },
     opciones: {
         width: 130,
