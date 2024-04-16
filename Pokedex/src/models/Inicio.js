@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
-import Buscador from './Buscador';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Inicio() {
-    const navigation = useNavigation();
+    const navigation = useNavigation();//navegacion
+
     return (
         <View style={styles.container}>
 
@@ -24,7 +24,8 @@ export default function Inicio() {
             <View style={{ flexDirection: "row", }}>
                 <TouchableOpacity
                     onPress={() => {
-                        Alert.alert("Has presionado el botón de POKEMON");
+                        //boton de PokeBall (Pokemon)
+                        navigation.navigate("Pokemon")
 
                     }}>
                     <View style={styles.opciones}>
@@ -38,8 +39,9 @@ export default function Inicio() {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                    //Boton de lupa (Buscar pokemon)
                     onPress={() => {
-                        navigation.navigate('Buscador')
+                        navigation.navigate("Buscador") //cambio de pantalla
                     }}>
                     <View style={styles.opciones}>
                         <Image
@@ -53,7 +55,8 @@ export default function Inicio() {
             </View>
             <TouchableOpacity
                 onPress={() => {
-                    Alert.alert("Has presionado el botón Pokemon favoritos");
+                    //boton de corazon (Pokemon favoritos)
+                    navigation.navigate("Favorito") //cambio de pantalla
                 }}>
                 <View style={styles.opciones}>
                     <Image

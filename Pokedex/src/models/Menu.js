@@ -1,23 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Pokemon from './Pokemon';
+
 
 export default function Menu() {
-    const navigation = useNavigation();
+    const navigation = useNavigation();//navegacion
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: "row", }}>
 
                 <TouchableOpacity
                     onPress={() => {
-                        Alert.alert("Has presionado el botón pokemon favoritos");
+                        //boton favorito
+                        navigation.navigate("Favorito")
                     }}>
                     <View style={styles.opciones}>
                         <Image
                             style={styles.imagen}
                             source={require("../img/Corazon.png")}
-                            resizeMethod='contain'
+                        //resizeMethod='contain'
                         />
 
                     </View>
@@ -25,6 +25,7 @@ export default function Menu() {
 
                 <TouchableOpacity
                     onPress={() => {
+                        //Boton Pokemon
                         navigation.navigate('Pokemon')
 
                     }}>
@@ -32,7 +33,7 @@ export default function Menu() {
                         <Image
                             style={{ flex: 1, resizeMode: "contain", width: "80%", borderRadius: 30 }}
                             source={{ uri: "https://w7.pngwing.com/pngs/173/464/png-transparent-pokemon-ball-pokeball-area-wiki-technology-thumbnail.png" }}
-                            resizeMethod='contain'
+                        //resizeMethod='contain'
                         />
 
                     </View>
@@ -40,13 +41,14 @@ export default function Menu() {
 
                 <TouchableOpacity
                     onPress={() => {
-                        Alert.alert("Has presionado el botón buscar pokemon");
+                        //boton buscar pokemon
+                        navigation.navigate("Buscador")
                     }}>
                     <View style={styles.opciones}>
                         <Image
                             style={styles.imagen}
                             source={{ uri: "https://images.wikidexcdn.net/mwuploads/wikidex/e/e2/latest/20230122133405/Lupa_EP.png" }}
-                            resizeMethod='contain'
+                        //resizeMethod='contain'
                         />
 
                     </View>
