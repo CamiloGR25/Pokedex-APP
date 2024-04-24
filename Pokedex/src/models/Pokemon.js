@@ -18,7 +18,6 @@ export default function Pokemon() {
                     <Image
                         style={styles.imagen_pokemon}
                         source={{ uri: "https://www.nintendo.com/eu/media/images/08_content_images/news_5/2016_1/august_10/CI7_PokemonFeatureNews_Charmander.jpg" }}
-                        resizeMode="contain"//mantenga toda la imagen               
                     />
                 </View>
             </View>
@@ -28,13 +27,14 @@ export default function Pokemon() {
     return (
         <View style={styles.container}>
 
-            <Menu />
-            <StatusBar style="auto" />
-            <View>
+            <View >
                 {pokemon_arr}
             </View>
-        </View>
 
+            <Menu />
+
+            <StatusBar style="auto" />
+        </View>
     )
 }
 
@@ -46,23 +46,24 @@ const styles = StyleSheet.create({
         //justifyContent: 'center',
     },
     nombre_container: {
-        marginTop: "20%",
-        width: "45%",
+        marginTop: "10%",
+        width: "25%",
         height: "5%",
         backgroundColor: "white",
-        marginRight: "35%"
+        marginRight: "50%"
     },
     nombre_texto: {
-        fontSize: 25,
+        fontSize: 10,
         color: "black",
         fontWeight: "bold",
         marginLeft: 5
 
     },
     imagen_container: {
-        width: "80%",
-        height: "40%",
-        backgroundColor: "white"
+        width: "40%",
+        height: "20%",
+        backgroundColor: "white",
+
     },
     imagen_pokemon: {
         flex: 1,
@@ -70,16 +71,4 @@ const styles = StyleSheet.create({
         width: "100%",
     },
 });
-function A() {
-    const views = [];
-    for (let i = 0; i < 5; i++) {
-        views.push(
-            <View key={i} style={{ margin: 10, padding: 10, backgroundColor: 'lightblue' }}>
-                <Text>View {i + 1}</Text>
-            </View>
-        );
-    }
-
-    return <View>{views}</View>;
-};
 
